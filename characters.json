@@ -1,0 +1,22 @@
+[
+  { "id": 0,
+    "name": "Hachikuji",
+    "description": "A poor lost snail"
+  },
+  { "id": 1,
+    "name": "Araragi",
+    "description": "An absolute mad man"
+  },
+  { "id": 2,
+    "name": "Goku",
+    "description": "A nice guy"
+  },
+  { "id": 3,
+    "name": "Gohan",
+    "description": "Goku's son, also \"rice\" or \"meal\" in japanese. Man, Goku can only think about food..."
+  },
+  { "id": 4,
+    "name": "Bulma",
+    "description": "The daughter of a crazy scientist"
+  }
+]

@@ -1,0 +1,10 @@
+[
+  { "id": 0,
+    "title": "Bakemonogatari",
+    "characters": [ "Hachikuji", "Araragi" ]
+  },
+  { "id": 1,
+    "title": "Dragon Ball",
+    "characters": [ "Goku", "Gohan", "Bulma" ]
+  }
+]

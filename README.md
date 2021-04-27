@@ -4,7 +4,7 @@
 
 Install PHP on your machine using your package manager and run:
 ```bash
-php -S localhost:8080 router.php
+php -S localhost:8080 -t static router.php
 ```
 
 ## Windows
@@ -12,9 +12,11 @@ php -S localhost:8080 router.php
 - Install PHP using either [PHP For Windows: Binaries and sources Releases](https://windows.php.net/download/)
 or [WampServer](https://www.wampserver.com/).
 - [Configure your PATH](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/) to add `php.exe`'s folder
-- run `php.exe -S localhost:8080 router.php` inside the repository's root.
+- run `php.exe -S localhost:8080 -t static router.php` inside the repository's root.
 
 # Architecture
+
+## Root
 
 The architecture revolves arount one file: `router.php`. [The manual](https://www.php.net/manual/en/features.commandline.webserver.php) tells us that:
 > If a PHP file is given on the command line when the web server is started it is treated as a "router" script.
@@ -45,6 +47,17 @@ if (preg_match('/^/api(\/.*)?/', $_SERVER['REQUEST_URI'])) {
   return false;
 }
 ```
+
+## Subfolders
+
+For readability, I chose to split routes in folders using a per-collection
+logic. Each folder manages a collection.
+
+## Static files serving
+
+As we want to hide the server's logic from the client, we need to tell PHP to
+use another root for static files. This is done by using the `-t` option. We
+chose here to point to the `static` folder.
 
 # Parsing an API URI
 
