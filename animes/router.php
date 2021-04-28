@@ -15,7 +15,7 @@ function routeAnimes($path, $method) {
     case 'GET':
       print_json(getAllAnimes());
       break;
-    case 'PUT':
+    case 'POST':
       // TODO: implement adding an anime
       http_response_code('501');
     default:
@@ -26,7 +26,6 @@ function routeAnimes($path, $method) {
 }
 
 function specificAnime($path, $method, $anime) {
-  error_log("path is ".implode($path));
   // if path continues, handle continuation
   if (isset($path[0])) {
     switch ($path[0]) {
@@ -34,14 +33,6 @@ function specificAnime($path, $method, $anime) {
       switch ($method) {
       case 'GET':
         print_json(getCharactersOfAnime($anime));
-        break;
-      case 'PUT':
-        $data = file_get_content('php://input');
-        if (!addCharacterInAnime($anime, $data)) {
-          http_response_code('424');
-        } else {
-          http_response_code('201');
-        }
         break;
       default:
         http_response_code('405');
@@ -54,8 +45,13 @@ function specificAnime($path, $method, $anime) {
   // if path ends, handle method
   } else {
     switch ($method) {
-    case 'UPDATE':
-      // TODO: implement anime update
+    case 'PUT':
+      $data = json_decode(file_get_contents("php://input"), true);
+      if (updateAnime($anime, $data)) {
+        http_response_code('200');
+      } else {
+        http_response_code('424');
+      }
       http_response_code('501');
     default:
       // method not allowed

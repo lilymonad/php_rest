@@ -8,7 +8,7 @@ function routeCharacters($path, $method) {
   case 'GET':
     print_json(getCharacters());
     break;
-  case 'PUT':
+  case 'POST':
     // TODO: implement adding a character
     http_response_code('501');
   default:

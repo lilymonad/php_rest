@@ -6,11 +6,14 @@ function getAllAnimes() {
 }
 
 function getCharactersOfAnime($anime) {
-  $all_animes = json_decode(file_get_contents('animes.json'), true);
-  return $all_animes[$anime]['characters'];
+  $all_chars = json_decode(file_get_contents('characters.json'), true);
+  $filter = function($char) use ($anime) {
+    return $char['anime'] == $anime;
+  };
+  return array_values(array_filter($all_chars, $filter));
 }
 
-function addCharacterInAnime($anime, $data) {
+function updateAnime($anime, $data) {
   // TODO: implement
   return false;
 }

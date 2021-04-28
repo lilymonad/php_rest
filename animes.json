@@ -1,10 +1,8 @@
 [
   { "id": 0,
-    "title": "Bakemonogatari",
-    "characters": [ "Hachikuji", "Araragi" ]
+    "title": "Bakemonogatari"
   },
   { "id": 1,
-    "title": "Dragon Ball",
-    "characters": [ "Goku", "Gohan", "Bulma" ]
+    "title": "Dragon Ball"
   }
 ]

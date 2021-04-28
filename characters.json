@@ -1,22 +1,27 @@
 [
   { "id": 0,
     "name": "Hachikuji",
-    "description": "A poor lost snail"
+    "description": "A poor lost snail",
+    "anime": 0
   },
   { "id": 1,
     "name": "Araragi",
-    "description": "An absolute mad man"
+    "description": "An absolute mad man",
+    "anime": 0
   },
   { "id": 2,
     "name": "Goku",
-    "description": "A nice guy"
+    "description": "A nice guy",
+    "anime": 1
   },
   { "id": 3,
     "name": "Gohan",
-    "description": "Goku's son, also \"rice\" or \"meal\" in japanese. Man, Goku can only think about food..."
+    "description": "Goku's son, also \"rice\" or \"meal\" in japanese. Man, Goku can only think about food...",
+    "anime": 1
   },
   { "id": 4,
     "name": "Bulma",
-    "description": "The daughter of a crazy scientist"
+    "description": "The daughter of a crazy scientist",
+    "anime": 1
   }
 ]
