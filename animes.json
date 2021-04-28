@@ -1,8 +1,10 @@
 [
   { "id": 0,
-    "title": "Bakemonogatari"
+    "title": "Bakemonogatari",
+    "description": "This vampire is very cute"
   },
   { "id": 1,
-    "title": "Dragon Ball"
+    "title": "Dragon Ball",
+    "description": "Kamehameha"
   }
 ]
