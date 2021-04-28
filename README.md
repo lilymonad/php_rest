@@ -51,13 +51,20 @@ if (preg_match('/^/api(\/.*)?/', $_SERVER['REQUEST_URI'])) {
 ## Subfolders
 
 For readability, I chose to split routes in folders using a per-collection
-logic. Each folder manages a collection.
+logic. Each folder manages a collection. This is not the best approach but hey
+doing everything from scratch is not the best idea anyway (there are A LOT of
+REST frameworks out there ranging from super lightweight and easy to install, to
+industry standard frameworks).
 
 ## Static files serving
 
 As we want to hide the server's logic from the client, we need to tell PHP to
-use another root for static files. This is done by using the `-t` option. We
-chose here to point to the `static` folder.
+use another root for static files. This is done by using the `-t` option in the
+command line (see How to use).
+
+We chose here to point to the `static` folder. By doing this, if the client
+sends a `GET /index.html`, the server will reply with the content of
+`static/index.html` file.
 
 # Parsing an API URI
 
